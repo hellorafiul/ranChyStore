@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RanChy Store</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/822e49ef19.js" crossorigin="anonymous"></script>
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,22 +26,23 @@
   <main class="main">
     <div class="title mt-2 text-center">
       <h1 class="display-2">Welcome to <span class="header-title display-1">RanChy</span></h1>
-      <p class="lead">Experience shopping like never before!</p>
+      <p class="lead pb-2">Experience shopping like never before!</p>
     </div>
     <div class="search-field container text-center w-25">
-      <div class="input-group m-3">
+      <div class="input-group ok m-3">
         <input type="text" class="form-control" placeholder="Search for..." aria-label="Recipient's username"
           aria-describedby="button-addon2">
-        <button class="btn btn-primary" type="button" id="button-addon2" onclick="loadProducts()"><i
+        <button class="ranchy-btn-primary" type="button" id="button-addon2" onclick="loadProducts()"><i
             class="bi bi-search"></i></button>
       </div>
     </div>
-    <div class="row">
+    <div class="row mb-5 mt-5">
       <div class="col-md-9 col-lg-9 col-sm-7">
+        <!-- All Product Sectios -->
         <div id="all-products" class="">
-          <!-- <h1></h1> -->
         </div>
       </div>
+      <!-- My Cart Section -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -55,7 +55,7 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="p-color">
               <tr>
                 <th>Total Added-Products:</th>
                 <td><span id="total-Products">0</span></td>
@@ -88,17 +88,54 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="ranchy-btn-primary text-center"><i class="bi bi-cart-check"></i> Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer></footer>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-  </div>
+  <!-- Footer Section -->
+  <footer class="">
+    <div class="container footer-area">
+      <div class="row d-flex justify-content-between align-items-start py-5">
+        <div class="col-md-7 footer-menu align-items-end">
+          <div>
+            <a href="">Download Now</a>
+            <a href="">License</a>
+          </div>
+          <div class="footer-menu py-2">
+            <a href="">About</a>
+            <a href="">Features</a>
+            <a href="">Pricing</a>
+            <a href="">Careers</a>
+            <a href="">Help</a>
+            <a href="">Privacy Policy</a>
+          </div>
+          <div class="footer-social d-md-block d-none">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="pt-4 d-md-block d-none">&copy; 2021 <b>RanChy</b>. All rights reserved</p>
+        </div>
+        <div class="col-md-4 d-lg-grid justify-content-end footer-right mt-4 mt-sm-0">
+          <p class="text-white">Get the App</p>
+          <a href=""><img src="images/App Store Badge.png" class="d-block pb-3" alt=""></a>
+          <a href=""><img src="images/Google Play Badge.png" alt=""></a>
+        </div>
+        <div class="footer-social d-md-none pt-4">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="d-md-none pt-4">&copy; 2021 <b>RanChy</b>. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
