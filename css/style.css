@@ -1,8 +1,17 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&family=Manrope:wght@300;400&family=Poppins:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+}
+.title h1{
+  font-family: 'Kaushan Script', cursive;
+}
+.header-title{
+  
+  color: #59C42B;
 }
 .search-field {
   border: none;
