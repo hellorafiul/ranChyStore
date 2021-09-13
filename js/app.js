@@ -15,13 +15,16 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${product.image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h2 class="product-title">${product.title}</h2>
       <p><b>Category:</b> ${product.category}</p>
-      <p><b>Avarage Ratings:</b> ${product.rating.rate}</p>
-      <p><b>Number Of Ratings:</b> ${product.rating.count}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <p><b>Average Ratings:</b> ${product.rating.rate}</p>
+      <p><b>Total Ratings:</b> ${product.rating.count}</p>
+      <h3 class="pb-3">Price: $${product.price}</h3>
+      <div class="d-flex justify-content-around align-items-center py-lg-2">
+       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now  btn btn-success"><i class="bi bi-basket2"></i> Add to cart</button>
+       <button id="details-btn" class="btn btn-outline-info"><i class="bi bi-list-stars"></i> Details</button></div>
+       </div>
+       </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -46,12 +49,12 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.abs(total);
+  document.getElementById(id).innerText = Math.abs(total).toFixed(2);
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.abs(value);
+  document.getElementById(id).innerText = Math.abs(value).toFixed(2);
 };
 
 // update delivery charge and total Tax
@@ -77,6 +80,6 @@ const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+  document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 loadProducts();

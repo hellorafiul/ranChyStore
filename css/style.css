@@ -1,3 +1,5 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&family=Manrope:wght@300;400&family=Poppins:wght@300;500;600&display=swap');
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
@@ -36,17 +38,33 @@ body {
   justify-content: center;
 }
 .single-product {
-  padding: 10px;
   transition: 0.6s;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+  padding: 10px;
+  margin: 3% 3%;
+  border-radius: 5px;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  /* box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 1px solid cyan; */
+  transform: translateY(-10px);
+  transition: transform .5s ease-in-out;
+  box-shadow: 0px 0px 6px rgb(0 0 0 / 30%);
+  background: rgb(255, 248, 241);
+  
 }
 .product-image {
   width: 150px;
   height: 150px;
+}
+.product-title{
+  line-height: 30px;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Inter';
+  color: #383838;
+  margin: 20px 0;
 }
 .cart {
   width: 350px;
